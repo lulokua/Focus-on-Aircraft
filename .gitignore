@@ -1,0 +1,35 @@
+# 暂时允许所有文件上传到仓库
+# 如需要忽略特定文件，请取消下面相应行的注释
+
+# 依赖
+# node_modules/
+# package-lock.json
+
+# 日志
+# *.log
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+
+# 操作系统文件
+# .DS_Store
+# Thumbs.db
+
+# IDE
+# .vscode/
+# .idea/
+# *.swp
+# *.swo
+# *~
+
+# 环境变量
+# .env
+# .env.local
+# .env.development
+# .env.test
+# .env.production
+
+# 构建输出
+# dist/
+# build/
+

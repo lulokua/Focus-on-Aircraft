@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择目的地 - Focus on Aircraft</title>
+    <link rel="stylesheet" href="../shared/common.css">
+    <link rel="stylesheet" href="../shared/steps.css">
+    <link rel="stylesheet" href="arrival.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 腾讯地图样式 -->
+    <style>
+        .tencent-map-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 背景装饰 -->
+        <div class="bg-decoration">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- 全屏地图 -->
+        <div class="map-selector">
+            <div id="arrival-map" class="selection-map-container"></div>
+        </div>
+
+        <!-- UI浮动层 -->
+        <div class="ui-overlay">
+            <p class="instruction-text">
+                <i class="fas fa-info-circle"></i>
+                在地图上点击机场标记选择目的地（蓝色标记为起点）
+            </p>
+
+            <div id="selected-arrival" class="selected-airport" style="display: none;">
+                <div class="airport-card">
+                    <div class="airport-icon">
+                        <i class="fas fa-plane-arrival"></i>
+                    </div>
+                    <div class="airport-info">
+                        <h3 id="arrival-name"></h3>
+                        <p id="arrival-city"></p>
+                        <div class="flight-details">
+                            <span class="flight-detail">
+                                <i class="fas fa-route"></i>
+                                <span id="flight-distance">-</span>
+                            </span>
+                            <span class="flight-detail">
+                                <i class="fas fa-clock"></i>
+                                <span id="flight-time">-</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部操作按钮 -->
+        <div class="bottom-actions">
+            <div class="action-buttons">
+                <button class="btn btn-secondary btn-back" id="btn-step2-back">
+                    <i class="fas fa-arrow-left"></i>
+                    上一步
+                </button>
+                <button class="btn btn-primary btn-next" id="btn-step2-next" disabled>
+                    下一步
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载指示器 -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-plane fa-spin"></i>
+            <p>正在加载...</p>
+        </div>
+    </div>
+
+    <!-- 腾讯地图API -->
+    <script src="https://map.qq.com/api/gljs?v=1.exp&libraries=geometry,convertor&key=KOQBZ-4V5KQ-HOE5W-4KCFR-SHIMH-CFFS3"></script>
+    <script src="../shared/tencent-map.js"></script>
+    <script src="arrival.js"></script>
+</body>
+</html>

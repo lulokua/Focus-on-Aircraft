@@ -1,0 +1,83 @@
+/* ============================================
+   欢迎页面样式
+   ============================================ */
+
+.welcome-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: var(--shadow-xl);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease;
+    backdrop-filter: blur(10px);
+}
+
+.welcome-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: white;
+    animation: bounce 2s ease infinite;
+}
+
+.welcome-card h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-subtitle {
+    font-size: 24px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.welcome-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .welcome-card {
+        padding: 40px 20px;
+    }
+
+    .welcome-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    .welcome-card h1 {
+        font-size: 32px;
+    }
+
+    .welcome-subtitle {
+        font-size: 18px;
+    }
+
+    .welcome-description {
+        font-size: 14px;
+    }
+}
+

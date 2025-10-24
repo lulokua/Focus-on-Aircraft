@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择座位 - Focus on Aircraft</title>
+    <link rel="stylesheet" href="../shared/common.css">
+    <link rel="stylesheet" href="../shared/steps.css">
+    <link rel="stylesheet" href="seat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 背景装饰 -->
+        <div class="bg-decoration">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <section class="page-section active" id="step-3">
+                <div class="section-card seat-page">
+                    <h1 class="section-title visible">
+                        <i class="fas fa-chair"></i>
+                        选择您的座位
+                    </h1>
+                    
+                    <!-- 座位图例 -->
+                    <div class="seat-legend">
+                        <div class="legend-item">
+                            <div class="seat-demo available"></div>
+                            <span>可选</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat-demo occupied"></div>
+                            <span>已占用</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat-demo selected"></div>
+                            <span>已选择</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="seat-demo exit-row"></div>
+                            <span>紧急出口</span>
+                        </div>
+                    </div>
+
+                    <!-- 飞机机舱 -->
+                    <div class="aircraft-cabin">
+                        <!-- 机头 -->
+                        <div class="aircraft-nose">
+                            <i class="fas fa-plane"></i>
+                        </div>
+
+                        <!-- 座位区域 -->
+                        <div class="seats-container">
+                            <!-- 头等舱 -->
+                            <div class="cabin-section first-class">
+                                <div class="cabin-label">
+                                    <i class="fas fa-crown"></i>
+                                    头等舱
+                                </div>
+                                <div class="seats-grid" id="first-class-seats"></div>
+                            </div>
+
+                            <!-- 经济舱 -->
+                            <div class="cabin-section economy-class">
+                                <div class="cabin-label">
+                                    <i class="fas fa-users"></i>
+                                    经济舱
+                                </div>
+                                <div class="seats-grid" id="economy-seats"></div>
+                            </div>
+                        </div>
+
+                        <!-- 机尾 -->
+                        <div class="aircraft-tail">
+                            <div class="tail-decoration"></div>
+                        </div>
+                    </div>
+
+                    <!-- 选中座位信息 -->
+                    <div class="selected-seat-info" id="selected-seat-info" style="display: none;">
+                        <div class="info-content">
+                            <i class="fas fa-check-circle"></i>
+                            <span>已选择座位：<strong id="selected-seat-number"></strong></span>
+                            <span class="seat-type-label" id="selected-seat-type"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 活动选择弹窗 -->
+    <div class="activity-popup" id="activity-modal" style="display: none;">
+        <div class="popup-arrow"></div>
+        <div class="popup-title">
+            <i class="fas fa-tasks"></i>
+            选择活动
+        </div>
+        
+        <div class="activity-options">
+            <div class="activity-card" data-activity="target">
+                <div class="activity-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>目标</h3>
+            </div>
+            
+            <div class="activity-card" data-activity="study">
+                <div class="activity-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>学习</h3>
+            </div>
+            
+            <div class="activity-card" data-activity="reading">
+                <div class="activity-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>看书</h3>
+            </div>
+        </div>
+        
+        <button class="btn-close-popup" id="btn-close-modal">
+            <i class="fas fa-times"></i>
+            取消
+        </button>
+    </div>
+
+    <!-- 加载指示器 -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-plane fa-spin"></i>
+            <p>正在加载...</p>
+        </div>
+    </div>
+
+    <script src="seat.js"></script>
+</body>
+</html>

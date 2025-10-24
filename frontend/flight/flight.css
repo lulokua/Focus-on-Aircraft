@@ -1,0 +1,160 @@
+/* ============================================
+   飞行中页面样式
+   ============================================ */
+
+/* 飞行仪表盘 */
+.flight-dashboard {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    background: var(--card-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: var(--shadow-xl);
+    z-index: 10000;
+    backdrop-filter: blur(10px);
+}
+
+.dashboard-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.dashboard-item i {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* 主内容区 */
+.flight-content {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+
+#flight-map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 浮动控制按钮 */
+.flight-controls {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+}
+
+.flight-controls .btn {
+    padding: 12px 20px;
+    font-size: 15px;
+    min-width: 150px;
+    box-shadow: var(--shadow-xl);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    color: white;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+    transform: translateY(-2px);
+}
+
+/* 模态框 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+}
+
+.modal-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.modal-content p {
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal-actions .btn {
+    flex: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .flight-dashboard {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+        top: 10px;
+    }
+    
+    .dashboard-item {
+        justify-content: center;
+        font-size: 14px;
+    }
+    
+    .flight-controls {
+        bottom: 20px;
+        left: 20px;
+        gap: 10px;
+    }
+    
+    .flight-controls .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+        min-width: 130px;
+    }
+    
+    .modal-content {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+}

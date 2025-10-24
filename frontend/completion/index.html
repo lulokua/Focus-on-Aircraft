@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞行完成 - Focus on Aircraft</title>
+    <link rel="stylesheet" href="../shared/common.css">
+    <link rel="stylesheet" href="completion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 背景装饰 -->
+        <div class="bg-decoration">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- 完成页面 -->
+        <main class="completion-content">
+            <div class="completion-card">
+                <div class="completion-icon" id="completion-icon">
+                    <i class="fas fa-plane-arrival"></i>
+                </div>
+                
+                <h1 id="completion-title">飞行完成！</h1>
+                <p id="completion-subtitle">恭喜您成功完成这次专注之旅</p>
+                
+                <div class="flight-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">飞行时长</span>
+                            <span class="stat-value" id="flight-duration">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">飞行距离</span>
+                            <span class="stat-value" id="flight-distance">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">完成任务</span>
+                            <span class="stat-value" id="completed-tasks">-</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievement-section">
+                    <h3>获得成就</h3>
+                    <div class="achievements" id="achievements">
+                        <!-- 成就将通过JS动态添加 -->
+                    </div>
+                </div>
+                
+                <div class="completion-actions">
+                    <button class="btn btn-primary btn-large" id="btn-new-flight">
+                        <i class="fas fa-plane"></i>
+                        开始新飞行
+                    </button>
+                    <button class="btn btn-secondary" id="btn-share-result">
+                        <i class="fas fa-share"></i>
+                        分享成果
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="completion.js"></script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+/* ============================================
+   目的地选择页面样式
+   ============================================ */
+
+/* 地图选择器样式 - 全屏模式 */
+.map-selector {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    margin: 0;
+}
+
+.selection-map-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+/* UI浮动层 */
+.ui-overlay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.ui-overlay > * {
+    pointer-events: auto;
+}
+
+/* 动画定义 */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 指导文本 - 毛玻璃效果 */
+.instruction-text {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: white;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.instruction-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.instruction-text i {
+    color: white;
+    font-size: 20px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* 已选机场显示 - 毛玻璃效果 */
+.selected-airport {
+    margin-bottom: 20px;
+    animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.airport-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.airport-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.airport-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: white;
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+
+.airport-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.airport-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.airport-info p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 12px;
+}
+
+/* 飞行信息详情 */
+.flight-details {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.flight-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.flight-detail:hover {
+    background: transparent;
+    border: none;
+    transform: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.flight-detail i {
+    color: rgba(16, 185, 129, 0.9);
+    font-size: 13px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* 原飞行信息卡片样式已被删除 - 信息已集成到机场卡片中 */
+
+/* 底部按钮容器 */
+.bottom-actions {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-actions .action-buttons {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 0 !important;
+}
+
+/* 毛玻璃按钮样式 - 使用更具体的选择器覆盖通用样式 */
+.bottom-actions .btn-next,
+.bottom-actions .btn-back {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    border-radius: 12px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        0 4px 16px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+    min-width: 110px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    width: auto !important;
+}
+
+.bottom-actions .btn-next:before,
+.bottom-actions .btn-back:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.bottom-actions .btn-next:hover,
+.bottom-actions .btn-back:hover {
+    transform: translateY(-2px) !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.3),
+        0 6px 20px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+.bottom-actions .btn-next:hover:before,
+.bottom-actions .btn-back:hover:before {
+    left: 100%;
+}
+
+.bottom-actions .btn-next:active,
+.bottom-actions .btn-back:active {
+    transform: translateY(0px) !important;
+    transition: transform 0.1s;
+}
+
+.bottom-actions .btn-next:disabled {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05) !important;
+    opacity: 0.6;
+}
+
+.bottom-actions .btn-next:disabled:hover {
+    transform: none !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.bottom-actions .btn-next:disabled:before {
+    display: none;
+}
+
+.bottom-actions .btn-next i,
+.bottom-actions .btn-back i {
+    font-size: 13px !important;
+    transition: transform 0.3s ease;
+}
+
+.bottom-actions .btn-next:hover:not(:disabled) i {
+    transform: translateX(4px);
+}
+
+.bottom-actions .btn-back:hover i {
+    transform: translateX(-4px);
+}
+
+/* 波纹效果 */
+.bottom-actions .btn-next::after,
+.bottom-actions .btn-back::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.bottom-actions .btn-next:active:not(:disabled)::after,
+.bottom-actions .btn-back:active::after {
+    width: 300px;
+    height: 300px;
+    transition: width 0.1s, height 0.1s;
+}
+
+/* 焦点样式 */
+.bottom-actions .btn-next:focus,
+.bottom-actions .btn-back:focus {
+    outline: none;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        0 4px 16px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        0 0 0 3px rgba(255, 255, 255, 0.3) !important;
+}
+
+.bottom-actions .btn-next:focus:disabled {
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 0 0 3px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .ui-overlay {
+        left: 10px;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .bottom-actions {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .bottom-actions .action-buttons {
+        padding: 0;
+        width: 100%;
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
+    
+    .bottom-actions .btn-next,
+    .bottom-actions .btn-back {
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        min-width: 100px !important;
+        gap: 8px !important;
+        border-radius: 12px !important;
+        box-shadow: 
+            0 8px 24px rgba(0, 0, 0, 0.25),
+            0 4px 12px rgba(0, 0, 0, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+        /* 针对触摸设备优化 */
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+    
+    /* 移动端按钮图标 */
+    .bottom-actions .btn-next i,
+    .bottom-actions .btn-back i {
+        font-size: 13px !important;
+    }
+    
+    /* 移动端悬浮效果改为触摸反馈 */
+    .bottom-actions .btn-next:hover,
+    .bottom-actions .btn-back:hover {
+        transform: none !important;
+    }
+    
+    .bottom-actions .btn-next:active:not(:disabled),
+    .bottom-actions .btn-back:active {
+        transform: scale(0.96) !important;
+        transition: transform 0.1s;
+        background: rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 
+            0 8px 24px rgba(0, 0, 0, 0.25),
+            0 4px 12px rgba(0, 0, 0, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+    }
+    
+    /* 禁用状态在移动端的优化 */
+    .bottom-actions .btn-next:disabled {
+        padding: 12px 20px !important;
+        box-shadow: 
+            0 4px 12px rgba(0, 0, 0, 0.15),
+            0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .bottom-actions .btn-next:disabled:hover {
+        transform: none !important;
+    }
+    
+    /* 移动端按钮在悬浮时不显示图标移动动画 */
+    .bottom-actions .btn-next:hover:not(:disabled) i,
+    .bottom-actions .btn-back:hover i {
+        transform: none;
+    }
+    
+    .airport-card {
+        padding: 18px;
+        gap: 16px;
+        border-radius: 16px;
+    }
+    
+    .airport-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 22px;
+    }
+    
+    .airport-info h3 {
+        font-size: 20px;
+    }
+    
+    .airport-info p {
+        font-size: 14px;
+    }
+    
+    .instruction-text {
+        padding: 14px 18px;
+        font-size: 15px;
+        border-radius: 14px;
+    }
+    
+    .instruction-text i {
+        font-size: 18px;
+    }
+    
+    .flight-details {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .flight-detail {
+        justify-content: flex-start;
+        font-size: 13px;
+        padding: 6px 10px;
+        border-radius: 10px;
+    }
+    
+    .flight-detail i {
+        font-size: 12px;
+    }
+}
+
+/* 隐藏腾讯地图默认信息窗口 */
+.tmap-infowindow {
+    display: none !important;
+}
+
+/* 确保没有其他浮动元素 */
+.ui-overlay > *:not(.instruction-text):not(.selected-airport) {
+    display: none !important;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞行自律训练系统 - Focus on Aircraft</title>
+    <link rel="stylesheet" href="../shared/common.css">
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 主容器 -->
+    <div class="app-container" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <!-- 背景装饰 -->
+        <div class="bg-decoration">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- 欢迎页面 -->
+        <div class="welcome-container">
+            <div class="welcome-card">
+                <div class="welcome-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h1>Focus on Aircraft</h1>
+                <p class="welcome-subtitle">飞行自律训练系统</p>
+                <p class="welcome-description">
+                    通过虚拟飞行体验，帮助您培养专注力和自律性。<br>
+                    选择起点和目的地，设定任务，开始您的专注之旅。
+                </p>
+                <button class="btn btn-primary btn-large" onclick="window.location.href='../departure/'">
+                    <i class="fas fa-rocket"></i>
+                    开始飞行
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

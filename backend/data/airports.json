@@ -1,0 +1,528 @@
+[
+  {
+      "id": "AEB",
+      "name": "百色巴马机场",
+      "city": "百色",
+      "country": "中国",
+      "latitude": 23.71944,
+      "longitude": 106.95917
+    },
+    {
+      "id": "BHY",
+      "name": "北海福成机场",
+      "city": "北海",
+      "country": "中国",
+      "latitude": 21.53944,
+      "longitude": 109.29389
+    },
+    {
+      "id": "KWL",
+      "name": "桂林两江国际机场",
+      "city": "桂林",
+      "country": "中国",
+      "latitude": 25.21944,
+      "longitude": 110.03944
+    },
+    {
+      "id": "KWL",
+      "name": "桂林奇峰岭机场",
+      "city": "桂林",
+      "country": "中国",
+      "latitude": 25.19444,
+      "longitude": 110.31972
+    },
+    {
+      "id": "HCJ",
+      "name": "河池金城江机场",
+      "city": "河池",
+      "country": "中国",
+      "latitude": 24.78389,
+      "longitude": 107.69972
+    },
+    {
+      "id": "LZH",
+      "name": "柳州白莲机场",
+      "city": "柳州",
+      "country": "中国",
+      "latitude": 24.20750,
+      "longitude": 109.39111
+    },
+    {
+      "id": "NNG",
+      "name": "南宁吴圩国际机场",
+      "city": "南宁",
+      "country": "中国",
+      "latitude": 22.6082667,
+      "longitude": 108.1724417
+    },
+    {
+      "id": "WUZ",
+      "name": "梧州长洲岛机场",
+      "city": "梧州",
+      "country": "中国",
+      "latitude": 23.45667,
+      "longitude": 111.24806
+    },
+    {
+      "id": "WUZ",
+      "name": "梧州西江机场",
+      "city": "梧州",
+      "country": "中国",
+      "latitude": 23.40139,
+      "longitude": 111.09861
+    },
+    {
+      "id": "YLX",
+      "name": "玉林福绵机场",
+      "city": "玉林",
+      "country": "中国",
+      "latitude": 22.43806,
+      "longitude": 110.12083
+    },
+
+    
+      {
+        "id": "CAN",
+        "name": "广州白云国际机场",
+        "city": "广州",
+        "country": "中国",
+        "latitude": 23.39250,
+        "longitude": 113.29889
+      },
+      {
+        "id": "HUZ",
+        "name": "惠州平潭机场",
+        "city": "惠州",
+        "country": "中国",
+        "latitude": 23.04833,
+        "longitude": 114.60028
+      },
+      {
+        "id": "SWA",
+        "name": "揭阳潮汕国际机场",
+        "city": "揭阳",
+        "country": "中国",
+        "latitude": 23.55250,
+        "longitude": 116.50583
+      },
+      {
+        "id": "MXZ",
+        "name": "梅州梅县机场",
+        "city": "梅州",
+        "country": "中国",
+        "latitude": 24.26639,
+        "longitude": 116.10444
+      },
+      {
+        "id": "HSC",
+        "name": "韶关丹霞机场",
+        "city": "韶关",
+        "country": "中国",
+        "latitude": 24.97861,
+        "longitude": 113.42111
+      },
+      {
+        "id": "SZX",
+        "name": "深圳宝安国际机场",
+        "city": "深圳",
+        "country": "中国",
+        "latitude": 22.63944,
+        "longitude": 113.81083
+      },
+      {
+        "id": "ZHA",
+        "name": "湛江吴川国际机场",
+        "city": "湛江",
+        "country": "中国",
+        "latitude": 21.48167,
+        "longitude": 110.59028
+      },
+      {
+        "id": "ZUH",
+        "name": "珠海金湾机场",
+        "city": "珠海",
+        "country": "中国",
+        "latitude": 22.00694,
+        "longitude": 113.37611
+      },
+        {
+          "id": "HAK",
+          "name": "海口美兰国际机场",
+          "city": "海口",
+          "country": "中国",
+          "latitude": 19.93472,
+          "longitude": 110.45889
+        },
+        {
+          "id": "SYX",
+          "name": "三亚凤凰国际机场",
+          "city": "三亚",
+          "country": "中国",
+          "latitude": 18.30290,
+          "longitude": 109.41227
+        },
+        {
+          "id": "BAR",
+          "name": "琼海博鳌国际机场",
+          "city": "琼海",
+          "country": "中国",
+          "latitude": 19.14056,
+          "longitude": 110.45889
+        },
+        {
+          "id": "XYI",
+          "name": "三沙永兴机场",
+          "city": "三沙",
+          "country": "中国",
+          "latitude": 16.83361,
+          "longitude": 112.34500
+        },
+          {
+            "id": "PEK",
+            "name": "北京首都国际机场",
+            "city": "北京",
+            "country": "中国",
+            "latitude": 40.07250,
+            "longitude": 116.59750
+          },
+          {
+            "id": "PKX",
+            "name": "北京大兴国际机场",
+            "city": "北京",
+            "country": "中国",
+            "latitude": 39.50917,
+            "longitude": 116.41056
+          },
+          {
+            "id": "NAY",
+            "name": "北京南苑机场",
+            "city": "北京",
+            "country": "中国",
+            "latitude": 39.78417,
+            "longitude": 116.39417
+          },
+          
+            {
+              "id": "ALB",
+              "name": "Albany International Airport",
+              "city": "Albany",
+              "country": "美国",
+              "latitude": 42.74917,
+              "longitude": -73.80194
+            },
+            {
+              "id": "ART",
+              "name": "Watertown International Airport",
+              "city": "Watertown",
+              "country": "美国",
+              "latitude": 43.99194,
+              "longitude": -76.02056
+            },
+            {
+              "id": "BGM",
+              "name": "Greater Binghamton Airport",
+              "city": "Binghamton",
+              "country": "美国",
+              "latitude": 42.20861,
+              "longitude": -75.97972
+            },
+            {
+              "id": "BUF",
+              "name": "Buffalo Niagara International Airport",
+              "city": "Buffalo",
+              "country": "美国",
+              "latitude": 42.94056,
+              "longitude": -78.73222
+            },
+            {
+              "id": "DSV",
+              "name": "Dansville Municipal Airport",
+              "city": "Dansville",
+              "country": "美国",
+              "latitude": 42.57083,
+              "longitude": -77.71306
+            },
+            {
+              "id": "DKK",
+              "name": "Chautauqua County/Dunkirk Airport",
+              "city": "Dunkirk",
+              "country": "美国",
+              "latitude": 42.49333,
+              "longitude": -79.27194
+            },
+            {
+              "id": "ELM",
+              "name": "Elmira/Corning Regional Airport",
+              "city": "Elmira/Corning",
+              "country": "美国",
+              "latitude": 42.16000,
+              "longitude": -76.89167
+            },
+            {
+              "id": "ELZ",
+              "name": "Wellsville Municipal Airport",
+              "city": "Wellsville",
+              "country": "美国",
+              "latitude": 42.10944,
+              "longitude": -77.99000
+            },
+            {
+              "id": "FID",
+              "name": "Elizabeth Field",
+              "city": "Fishers Island",
+              "country": "美国",
+              "latitude": 41.25139,
+              "longitude": -72.03167
+            },
+            {
+              "id": "FOK",
+              "name": "Francis S. Gabreski Airport",
+              "city": "Westhampton Beach",
+              "country": "美国",
+              "latitude": 40.84361,
+              "longitude": -72.63167
+            },
+            {
+              "id": "FRG",
+              "name": "Republic Airport",
+              "city": "East Farmingdale",
+              "country": "美国",
+              "latitude": 40.72889,
+              "longitude": -73.41333
+            },
+            {
+              "id": "HPN",
+              "name": "Westchester County Airport",
+              "city": "White Plains",
+              "country": "美国",
+              "latitude": 41.06694,
+              "longitude": -73.70750
+            },
+            {
+              "id": "HTO",
+              "name": "East Hampton Airport",
+              "city": "East Hampton",
+              "country": "美国",
+              "latitude": 40.95944,
+              "longitude": -72.25167
+            },
+            {
+              "id": "IAG",
+              "name": "Niagara Falls International Airport",
+              "city": "Niagara Falls",
+              "country": "美国",
+              "latitude": 43.10722,
+              "longitude": -78.94611
+            },
+            {
+              "id": "ISP",
+              "name": "Long Island MacArthur Airport",
+              "city": "Islip",
+              "country": "美国",
+              "latitude": 40.79528,
+              "longitude": -73.10028
+            },
+            {
+              "id": "ITH",
+              "name": "Ithaca Tompkins International Airport",
+              "city": "Ithaca",
+              "country": "美国",
+              "latitude": 42.49139,
+              "longitude": -76.45861
+            },
+            {
+              "id": "JFK",
+              "name": "John F. Kennedy International Airport",
+              "city": "New York City (Queens)",
+              "country": "美国",
+              "latitude": 40.63972,
+              "longitude": -73.77889
+            },
+            {
+              "id": "JHW",
+              "name": "Chautauqua County/Jamestown Airport",
+              "city": "Jamestown",
+              "country": "美国",
+              "latitude": 42.15333,
+              "longitude": -79.25806
+            },
+            {
+              "id": "JRA",
+              "name": "West 30th Street Heliport",
+              "city": "New York City (Manhattan)",
+              "country": "美国",
+              "latitude": 40.75463,
+              "longitude": -74.00681
+            },
+            {
+              "id": "JRB",
+              "name": "Downtown Manhattan/Wall Street Heliport",
+              "city": "New York City (Manhattan)",
+              "country": "美国",
+              "latitude": 40.70112,
+              "longitude": -74.00880
+            },
+            {
+              "id": "LGA",
+              "name": "LaGuardia Airport",
+              "city": "New York City (Queens)",
+              "country": "美国",
+              "latitude": 40.77500,
+              "longitude": -73.87500
+            },
+            {
+              "id": "LKP",
+              "name": "Lake Placid Airport",
+              "city": "Lake Placid",
+              "country": "美国",
+              "latitude": 44.26444,
+              "longitude": -73.96194
+            },
+            {
+              "id": "MGJ",
+              "name": "Orange County Airport",
+              "city": "Montgomery",
+              "country": "美国",
+              "latitude": 41.51000,
+              "longitude": -74.26472
+            },
+            {
+              "id": "MSV",
+              "name": "Sullivan County International Airport",
+              "city": "Monticello",
+              "country": "美国",
+              "latitude": 41.70167,
+              "longitude": -74.79500
+            },
+            {
+              "id": "MSS",
+              "name": "Massena International Airport (Richards Field)",
+              "city": "Massena",
+              "country": "美国",
+              "latitude": 44.93583,
+              "longitude": -74.84556
+            },
+            {
+              "id": "MTP",
+              "name": "Montauk Airport",
+              "city": "Montauk",
+              "country": "美国",
+              "latitude": 41.07667,
+              "longitude": -71.92056
+            },
+            {
+              "id": "NYS",
+              "name": "New York Skyports Seaplane Base",
+              "city": "New York City (Manhattan)",
+              "country": "美国",
+              "latitude": 40.73510,
+              "longitude": -73.97280
+            },
+            {
+              "id": "OIC",
+              "name": "Lt. Warren Eaton Airport",
+              "city": "Norwich",
+              "country": "美国",
+              "latitude": 42.56639,
+              "longitude": -75.52417
+            },
+            {
+              "id": "OGS",
+              "name": "Ogdensburg International Airport",
+              "city": "Ogdensburg",
+              "country": "美国",
+              "latitude": 44.68194,
+              "longitude": -75.46556
+            },
+            {
+              "id": "ONH",
+              "name": "Albert S. Nader Regional Airport",
+              "city": "Oneonta",
+              "country": "美国",
+              "latitude": 42.52478,
+              "longitude": -75.06447
+            },
+            {
+              "id": "PBG",
+              "name": "Plattsburgh International Airport",
+              "city": "Plattsburgh",
+              "country": "美国",
+              "latitude": 44.65083,
+              "longitude": -73.46806
+            },
+            {
+              "id": "POU",
+              "name": "Hudson Valley Regional Airport",
+              "city": "Poughkeepsie",
+              "country": "美国",
+              "latitude": 41.62667,
+              "longitude": -73.88417
+            },
+            {
+              "id": "RME",
+              "name": "Griffiss International Airport",
+              "city": "Rome",
+              "country": "美国",
+              "latitude": 43.23389,
+              "longitude": -75.40694
+            },
+            {
+              "id": "ROC",
+              "name": "Frederick Douglass–Greater Rochester International Airport",
+              "city": "Rochester",
+              "country": "美国",
+              "latitude": 43.11889,
+              "longitude": -77.67250
+            },
+            {
+              "id": "SCH",
+              "name": "Schenectady County Airport",
+              "city": "Schenectady",
+              "country": "美国",
+              "latitude": 42.85250,
+              "longitude": -73.92889
+            },
+            {
+              "id": "SLK",
+              "name": "Adirondack Regional Airport",
+              "city": "Saranac Lake",
+              "country": "美国",
+              "latitude": 44.38528,
+              "longitude": -74.20611
+            },
+            {
+              "id": "SXY",
+              "name": "Sidney Municipal Airport",
+              "city": "Sidney",
+              "country": "美国",
+              "latitude": 42.30250,
+              "longitude": -75.41611
+            },
+            {
+              "id": "SWF",
+              "name": "New York Stewart International Airport",
+              "city": "Newburgh",
+              "country": "美国",
+              "latitude": 41.50417,
+              "longitude": -74.10472
+            },
+            {
+              "id": "SYR",
+              "name": "Syracuse Hancock International Airport",
+              "city": "Syracuse",
+              "country": "美国",
+              "latitude": 43.11111,
+              "longitude": -76.10639
+            },
+            {
+              "id": "WSH",
+              "name": "Brookhaven Airport",
+              "city": "Shirley",
+              "country": "美国",
+              "latitude": 40.82194,
+              "longitude": -72.86694
+            }        
+          ]
+        
+    
+

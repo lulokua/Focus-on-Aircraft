@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登机牌 - Focus on Aircraft</title>
+    <link rel="stylesheet" href="../shared/common.css">
+    <link rel="stylesheet" href="../shared/steps.css">
+    <link rel="stylesheet" href="preflight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 背景装饰 -->
+        <div class="bg-decoration">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <section class="page-section active" id="boarding-pass-section">
+                <div class="section-card boarding-pass-container">
+                    <!-- 登机牌 -->
+                    <div class="boarding-pass" id="boarding-pass">
+                        <div class="boarding-pass-main">
+                            <!-- 顶部航空公司信息 -->
+                            <div class="airline-header">
+                                <div class="airline-logo">
+                                    <i class="fas fa-plane-departure"></i>
+                                </div>
+                                <div class="airline-info">
+                                    <div class="airline-name">Focus Airlines</div>
+                                    <div class="ticket-type">电子登机牌 | BOARDING PASS</div>
+                                </div>
+                            </div>
+
+                            <!-- 航班路线 -->
+                            <div class="flight-route">
+                                <div class="airport-info departure-airport">
+                                    <div class="city-name" id="departure-city">北京</div>
+                                    <div class="airport-code" id="departure-code">PEK</div>
+                                    <div class="airport-name" id="departure-name">首都国际机场</div>
+                                </div>
+                                
+                                <div class="flight-arrow">
+                                    <i class="fas fa-plane"></i>
+                                    <div class="arrow-line"></div>
+                                </div>
+                                
+                                <div class="airport-info arrival-airport">
+                                    <div class="city-name" id="arrival-city">上海</div>
+                                    <div class="airport-code" id="arrival-code">PVG</div>
+                                    <div class="airport-name" id="arrival-name">浦东国际机场</div>
+                                </div>
+                            </div>
+
+                            <!-- 航班详情 -->
+                            <div class="flight-details">
+                                <div class="detail-row">
+                                    <div class="detail-item">
+                                        <div class="detail-label">航班号 FLIGHT</div>
+                                        <div class="detail-value" id="flight-number">FA1024</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">日期 DATE</div>
+                                        <div class="detail-value" id="flight-date">23 OCT</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">登机时间 BOARDING</div>
+                                        <div class="detail-value" id="boarding-time">14:30</div>
+                                    </div>
+                                </div>
+                                <div class="detail-row">
+                                    <div class="detail-item">
+                                        <div class="detail-label">起飞时间 DEPARTURE</div>
+                                        <div class="detail-value" id="departure-time">15:00</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">到达时间 ARRIVAL</div>
+                                        <div class="detail-value" id="arrival-time">17:30</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">座位 SEAT</div>
+                                        <div class="detail-value seat-highlight" id="seat-number">12A</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 乘客信息 -->
+                            <div class="passenger-info">
+                                <div class="passenger-item">
+                                    <div class="passenger-label">舱位 CLASS</div>
+                                    <div class="passenger-value">经济舱 Y</div>
+                                </div>
+                                <div class="passenger-item">
+                                    <div class="passenger-label">登机口 GATE</div>
+                                    <div class="passenger-value" id="gate-number">A12</div>
+                                </div>
+                            </div>
+
+                            <!-- 底部提示 -->
+                            <div class="boarding-notice">
+                                <i class="fas fa-info-circle"></i>
+                                请在起飞前30分钟到达登机口 | Please arrive at gate 30 minutes before departure
+                            </div>
+                        </div>
+
+                        <!-- 条形码区域（可扫描检票） -->
+                        <div class="barcode-section">
+                            <svg id="barcode"></svg>
+                            <div class="booking-reference" id="booking-reference">FOCS2310231024</div>
+                            <!-- 扫描框 -->
+                            <div class="scan-frame" id="scan-frame">
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 扫描检票提示 -->
+                    <div class="tear-instruction" id="tear-instruction">
+                        <div class="tear-icon">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <div class="tear-text">
+                            <h3>拖动扫描框从左到右扫描条形码</h3>
+                            <p>完整扫描条形码即可检票</p>
+                        </div>
+                    </div>
+
+                    <!-- 撕票成功提示 -->
+                    <div class="tear-success" id="tear-success">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h2>检票成功！</h2>
+                        <p>祝您旅途愉快</p>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary btn-back" id="btn-back">
+                            <i class="fas fa-arrow-left"></i>
+                            上一步
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 加载指示器 -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-plane fa-spin"></i>
+            <p>正在生成登机牌...</p>
+        </div>
+    </div>
+
+    <script src="preflight.js"></script>
+</body>
+</html>

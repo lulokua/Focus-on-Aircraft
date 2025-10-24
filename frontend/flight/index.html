@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞行中 - Focus on Aircraft</title>
+    <link rel="stylesheet" href="../shared/common.css">
+    <link rel="stylesheet" href="flight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 腾讯地图样式 -->
+    <style>
+        .tencent-map-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 背景装饰 -->
+        <div class="bg-decoration">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- 飞行仪表盘 -->
+        <div class="flight-dashboard">
+            <div class="dashboard-item">
+                <i class="fas fa-plane"></i>
+                <span id="flight-status">飞行中</span>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-clock"></i>
+                <span id="flight-timer">00:00:00</span>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-route"></i>
+                <span id="flight-progress">0%</span>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <main class="flight-content">
+            <div id="flight-map"></div>
+        </main>
+
+        <!-- 浮动控制按钮 -->
+        <div class="flight-controls">
+            <button class="btn btn-info" id="btn-zoom-toggle">
+                <i class="fas fa-search-plus"></i>
+                放大飞机
+            </button>
+            <button class="btn btn-warning" id="btn-pause-flight">
+                <i class="fas fa-pause"></i>
+                暂停飞行
+            </button>
+            <button class="btn btn-danger" id="btn-emergency-land">
+                <i class="fas fa-exclamation-triangle"></i>
+                紧急降落
+            </button>
+        </div>
+
+        <!-- 暂停模态框 -->
+        <div class="modal-overlay" id="pause-modal">
+            <div class="modal-content">
+                <h3>飞行已暂停</h3>
+                <p>您可以稍作休息，准备好后继续飞行</p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="btn-resume-flight">
+                        <i class="fas fa-play"></i>
+                        继续飞行
+                    </button>
+                    <button class="btn btn-secondary" id="btn-end-flight">
+                        <i class="fas fa-stop"></i>
+                        结束飞行
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 腾讯地图API -->
+    <script src="https://map.qq.com/api/gljs?v=1.exp&libraries=geometry,convertor&key=KOQBZ-4V5KQ-HOE5W-4KCFR-SHIMH-CFFS3"></script>
+    <script src="../shared/tencent-map.js"></script>
+    <script src="flight.js"></script>
+</body>
+</html>
